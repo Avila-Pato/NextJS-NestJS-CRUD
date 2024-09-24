@@ -7,7 +7,7 @@ import { Prisma } from '@prisma/client';
 @Injectable()
 export class ProductsService {
 
-  constructor(private prismaService: PrismaService) {}
+  constructor(private readonly prismaService: PrismaService) {}
 
   async create(createProductDto: CreateProductDto) {
     try { 
@@ -62,17 +62,20 @@ export class ProductsService {
 
 
 
-
   async remove(id: number) {
-    const ProductFoundDelete = await this.prismaService.product.findUnique({
-      where: {
-        id: id,
-      },
-    });
-    if (!ProductFoundDelete) {
-      throw new NotFoundException(`Product with id ${id} not found`);
+    try {
+      return await this.prismaService.product.delete({
+        where: {
+          id,
+        },
+      });
+    } catch (error) {
+      if (error instanceof Prisma.PrismaClientKnownRequestError) {
+        if (error.code === 'P2025') { // Código de error cuando el registro no se encuentra
+          throw new NotFoundException(`Product with id ${id} not found`);
+        }
+      }
+      throw new Error('Error deleting product');
     }
-    return ProductFoundDelete;
   }
-}
-
+}  

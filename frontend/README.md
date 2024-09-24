@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto CRUD con Next.js
 
-## Getting Started
+Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) construida con **Next.js**. El objetivo de la aplicación es permitir la gestión básica de datos a través de una interfaz web moderna, utilizando **React** y otras herramientas de desarrollo.
 
-First, run the development server:
+## Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Dependencias principales:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (v14.2.13)**: Framework de React que permite crear aplicaciones web optimizadas para SEO y con renderizado del lado del servidor (SSR).
+- **React (v18)** y **React DOM (v18)**: Biblioteca de JavaScript para construir interfaces de usuario interactivas.
+- **react-hook-form (v7.53.0)**: Manejador de formularios para React que facilita la validación y gestión de datos de los formularios.
+- **Tailwind CSS**: Framework de CSS utilitario para estilizar componentes de manera eficiente.
+- **class-variance-authority (v0.7.0)**: Librería para manejar clases CSS condicionales con TypeScript.
+- **clsx (v2.1.1)**: Utilidad para concatenar clases CSS condicionales.
+- **lucide-react (v0.445.0)**: Conjunto de iconos de React basados en Lucide, útiles para mejorar la experiencia visual de la app.
+- **@radix-ui/react-label (v2.1.0)** y **@radix-ui/react-slot (v1.1.0)**: Componentes de la biblioteca Radix UI para manejar etiquetas y ranuras en interfaces accesibles.
+- **tailwind-merge (v2.5.2)**: Herramienta para combinar y sobrescribir clases CSS en Tailwind de manera eficiente.
+- **tailwindcss-animate (v1.0.7)**: Extensión para añadir animaciones en Tailwind CSS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Dependencias de desarrollo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **TypeScript (v5)**: Superset de JavaScript que añade tipado estático opcional.
+- **ESLint (v8)** y **eslint-config-next (v14.2.13)**: Herramienta para analizar y encontrar problemas en el código, garantizando que sigue las mejores prácticas.
+- **PostCSS (v8)**: Herramienta para transformar CSS usando JavaScript.
+- **@types/node (v20)**, **@types/react (v18.3.8)**, **@types/react-dom (v18)**: Definiciones de tipos para TypeScript para usar Node.js y React en el desarrollo.
 
-## Learn More
+## Funcionalidades principales
 
-To learn more about Next.js, take a look at the following resources:
+- **Gestión CRUD**: Permite crear, leer, actualizar y eliminar elementos.
+- **Interfaz moderna**: Estilizada con Tailwind CSS y componentes accesibles usando Radix UI.
+- **Validación de formularios**: Implementada con `react-hook-form` para asegurar la integridad de los datos.
+- **Optimización para producción**: Usando las herramientas de build de Next.js y ESLint para garantizar el mejor rendimiento y calidad de código.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cómo iniciar el proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Para comenzar a usar esta aplicación, sigue los siguientes pasos:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clona el repositorio.
+2. Instala las dependencias:
+   ```bash
+   npm install
