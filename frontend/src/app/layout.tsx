@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* layout es el main del Home page para que lo ponga en un contenedor */}
-        <main className="container mx-auto pt-5">
+        <main className="container mx-auto pt-5 ">
         {children}
         </main>
       </body>

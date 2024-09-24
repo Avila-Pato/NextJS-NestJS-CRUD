@@ -36,8 +36,6 @@ El proyecto está dividido en dos carpetas principales:
 - **npm** o **yarn**
 - **Mysql/SqlLite** u otro sistema de base de datos compatible con Prisma
 
-### Instalación del Frontend
 
-1. Navega a la carpeta `frontend`:
-   ```bash
-   cd frontend
+## Vista Previa
+![Referencia de la web](./frontend/src/assets/Pruebas.png)
